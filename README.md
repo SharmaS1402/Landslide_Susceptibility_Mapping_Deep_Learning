@@ -6,23 +6,23 @@ This repository hosts the implementation of a Deep Learning-based approach to ma
 
 ## Repository
 
-GitHub Repository: Landslide Susceptibility Mapping Using Deep Learning
+GitHub Repository: https://github.com/SharmaS1402/Landslide_Susceptibility_Mapping_Deep_Learning
 
 ## Project Highlights
 
-### High-Resolution Landslide Susceptibility Maps: Built using geomorphological and environmental factors.
+1. High-Resolution Landslide Susceptibility Maps: Built using geomorphological and environmental factors.
 
-### Innovative Deep Learning Models: Applied to large-scale geospatial data for accurate predictions.
+2. Innovative Deep Learning Models: Applied to large-scale geospatial data for accurate predictions.
 
-### Risk Assessment and Planning: Results can inform infrastructure development and disaster management policies.
+3. Risk Assessment and Planning: Results can inform infrastructure development and disaster management policies.
 
 ## Objective
 
 To develop a high-resolution landslide susceptibility map for Himachal Pradesh utilizing deep learning models to:
 
-### Evaluate and predict landslide risks for infrastructure and community safety.
+1. Evaluate and predict landslide risks for infrastructure and community safety.
 
-### Provide scientific insights to enhance disaster risk reduction strategies.
+2. Provide scientific insights to enhance disaster risk reduction strategies.
 
 ## Study Area
 
@@ -34,15 +34,15 @@ Importance: This region experiences frequent landslides due to steep slopes, rug
 
 ### Data Acquisition
 
-Sources:
+#### Sources:
 
-High-resolution Digital Elevation Model (DEM).
+1. High-resolution Digital Elevation Model (DEM).
 
-Historical landslide data.
+2. Historical landslide data.
 
-Environmental data such as precipitation, vegetation, and land use/land cover.
+3. Environmental data such as precipitation, vegetation, and land use/land cover.
 
-Key Factors:
+#### Key Factors:
 
 Geomorphological: Altitude, slope, aspect, ruggedness index.
 
@@ -76,27 +76,27 @@ Performance: Achieved 87.84% accuracy on the test set.
 
 ## Results
 
-Predicted landslide susceptibility values for 10,000 geospatial points.
+1. Predicted landslide susceptibility values for 10,000 geospatial points.
 
-Generated high-resolution susceptibility maps for Himachal Pradesh.
+2. Generated high-resolution susceptibility maps for Himachal Pradesh.
 
-Demonstrated superior performance compared to traditional methods like logistic regression.
+3. Demonstrated superior performance compared to traditional methods.
 
-Key Contributions
+## Key Contributions
 
-Advanced Model Application: Successfully applied a Deep Neural Network (DNN) to geospatial landslide susceptibility mapping.
+1. Advanced Model Application: Successfully applied a Deep Neural Network (DNN) to geospatial landslide susceptibility mapping.
 
-Scalability and Precision: Addressed challenges in handling high-dimensional datasets from various sources.
+2. Scalability and Precision: Addressed challenges in handling high-dimensional datasets from various sources.
 
-Actionable Outputs: Created maps to assist policymakers, urban planners, and emergency services.
+3. Actionable Outputs: Created maps to assist policymakers, urban planners, and emergency services.
 
-Mitigation Strategies
+## Mitigation Strategies
 
-Enhanced monitoring systems for high-risk zones.
+1. Enhanced monitoring systems for high-risk zones.
 
-Awareness programs to educate communities about landslide risks.
+2. Awareness programs to educate communities about landslide risks.
 
-Incorporation of susceptibility maps into regional planning and development strategies.
+3. Incorporation of susceptibility maps into regional planning and development strategies.
 
 ## References
 
@@ -112,10 +112,7 @@ Additional academic studies cited in the project presentation.
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-For more information, visit the GitHub Repository.
-
-
-
+For more details visit the /Main/reports directory which includes project report and a powerpoint presentation.
 
 ## Project Organization
 
@@ -137,7 +134,7 @@ For more information, visit the GitHub Repository.
 ├── references         <- Data dictionaries, manuals, and all other explanatory materials
 │
 ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── plots        <- Generated graphics and figures to be used in reporting
+│   └── plots          <- Generated graphics and figures to be used in reporting
 │
 ├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
 │                         generated with `pip freeze > requirements.txt`
