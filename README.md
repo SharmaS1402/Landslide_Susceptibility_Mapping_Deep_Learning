@@ -1,32 +1,120 @@
-# Data Project Template
+# Landslide Susceptibility Mapping Using Deep Learning
 
-<a target="_blank" href="https://datalumina.com/">
-    <img src="https://img.shields.io/badge/Datalumina-Project%20Template-2856f7" alt="Datalumina Project" />
-</a>
+## Overview
 
-## Cookiecutter Data Science
-This project template is a simplified version of the [Cookiecutter Data Science](https://cookiecutter-data-science.drivendata.org) template, created to suit the needs of Datalumina and made available as a GitHub template.
+This repository hosts the implementation of a Deep Learning-based approach to map landslide susceptibility in Himachal Pradesh, India. By leveraging advanced geospatial data and deep learning models, the project aims to provide actionable insights for risk management and disaster mitigation.
 
-## Adjusting .gitignore
+## Repository
 
-Ensure you adjust the `.gitignore` file according to your project needs. For example, since this is a template, the `/data/` folder is commented out and data will not be exlucded from source control:
+GitHub Repository: Landslide Susceptibility Mapping Using Deep Learning
 
-```plaintext
-# exclude data from source control by default
-# /data/
-```
+## Project Highlights
 
-Typically, you want to exclude this folder if it contains either sensitive data that you do not want to add to version control or large files.
+### High-Resolution Landslide Susceptibility Maps: Built using geomorphological and environmental factors.
 
-## Duplicating the .env File
-To set up your environment variables, you need to duplicate the `.env.example` file and rename it to `.env`. You can do this manually or using the following terminal command:
+### Innovative Deep Learning Models: Applied to large-scale geospatial data for accurate predictions.
 
-```bash
-cp .env.example .env # Linux, macOS, Git Bash, WSL
-copy .env.example .env # Windows Command Prompt
-```
+### Risk Assessment and Planning: Results can inform infrastructure development and disaster management policies.
 
-This command creates a copy of `.env.example` and names it `.env`, allowing you to configure your environment variables specific to your setup.
+## Objective
+
+To develop a high-resolution landslide susceptibility map for Himachal Pradesh utilizing deep learning models to:
+
+### Evaluate and predict landslide risks for infrastructure and community safety.
+
+### Provide scientific insights to enhance disaster risk reduction strategies.
+
+## Study Area
+
+Location: Himachal Pradesh, India.
+
+Importance: This region experiences frequent landslides due to steep slopes, rugged terrain, and environmental challenges.
+
+## Methodology
+
+### Data Acquisition
+
+Sources:
+
+High-resolution Digital Elevation Model (DEM).
+
+Historical landslide data.
+
+Environmental data such as precipitation, vegetation, and land use/land cover.
+
+Key Factors:
+
+Geomorphological: Altitude, slope, aspect, ruggedness index.
+
+Environmental: Vegetation cover, precipitation, land use.
+
+### Data Preparation
+
+Point Sampling: Extracted feature values using QGIS Point Sampling Tool.
+
+Data Encoding: Organized data into a tabular format with binary labels (1: landslide, 0: no landslide).
+
+Train-Test Split: 80% training and 20% testing.
+
+### Deep Learning Model
+
+Architecture:
+
+Input Layer: 7 neurons corresponding to the input features.
+
+Hidden Layers: Three dense layers with 30, 10, and 870 neurons using ReLU activation.
+
+Regularization: Batch normalization and dropout (rate: 0.5) to enhance stability and reduce overfitting.
+
+Output Layer: Single neuron with a sigmoid activation function for binary classification.
+
+Loss Function: Binary Cross-Entropy.
+
+Optimizer: Adam.
+
+Performance: Achieved 87.84% accuracy on the test set.
+
+## Results
+
+Predicted landslide susceptibility values for 10,000 geospatial points.
+
+Generated high-resolution susceptibility maps for Himachal Pradesh.
+
+Demonstrated superior performance compared to traditional methods like logistic regression.
+
+Key Contributions
+
+Advanced Model Application: Successfully applied a Deep Neural Network (DNN) to geospatial landslide susceptibility mapping.
+
+Scalability and Precision: Addressed challenges in handling high-dimensional datasets from various sources.
+
+Actionable Outputs: Created maps to assist policymakers, urban planners, and emergency services.
+
+Mitigation Strategies
+
+Enhanced monitoring systems for high-risk zones.
+
+Awareness programs to educate communities about landslide risks.
+
+Incorporation of susceptibility maps into regional planning and development strategies.
+
+## References
+
+QGIS Development Team. "QGIS Geographic Information System." Open Source Geospatial Foundation Project.
+
+U.S. Geological Survey. "Earth Explorer."
+
+National Remote Sensing Centre. "Bhuvan: An Indian Geo-Platform."
+
+Additional academic studies cited in the project presentation.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+For more information, visit the GitHub Repository.
+
+
 
 
 ## Project Organization
