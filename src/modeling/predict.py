@@ -6,7 +6,7 @@ from keras._tf_keras.keras.models import load_model
 model = load_model("../../models/landslide_model.h5")
 
 # Load the CSV file
-input_csv = "../../data/raw/more_predict.csv"
+input_csv = "../../data/external/Prediction_input_20k.csv"
 data = pd.read_csv(input_csv)
 
 # Extract the first two columns
@@ -22,7 +22,7 @@ predictions = model.predict(features)
 output_data["Predicted_Value"] = predictions
 
 # Save to a new CSV file
-output_csv = "../../data/raw/more_output.csv"
+output_csv = "../../data/processed/Prediction_20k_output.csv"
 output_data.to_csv(output_csv, index=False)
 
 print(f"Predictions saved to {output_csv}")

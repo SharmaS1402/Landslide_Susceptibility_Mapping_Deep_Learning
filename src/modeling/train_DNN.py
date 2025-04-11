@@ -4,7 +4,7 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Reading the dataset
-df = pd.read_csv("../../data/raw/data.csv")
+df = pd.read_csv("../../data/raw/final_training_data.csv")
 # df = pd.read_csv("../../data/raw/more_output.csv")
 # df = pd.read_csv("../../data/raw/mod_data.csv")
 
@@ -30,7 +30,7 @@ from sklearn.linear_model import LogisticRegression
 lr_model = LogisticRegression(max_iter=500)
 lr_model.fit(X_train, Y_train)
 
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, mean_squared_error
 from sklearn.metrics import classification_report
 from sklearn.metrics import roc_curve, roc_auc_score, mean_squared_error
 
@@ -40,6 +40,11 @@ accuracy = accuracy_score(Y_test, Y_pred)
 print("Accuracy using Logistic Regression : ", accuracy)
 print(classification_report(Y_test, Y_pred))
 roc_curve(Y_test, Y_pred)
+
+mse = mean_squared_error(Y_test, Y_pred)
+rmse = np.sqrt(mse)
+print("Mean Squarred Error: ", mse)
+print("Root Mean Squarred Error: ", rmse)
 
 # DNN Model
 
@@ -58,6 +63,7 @@ model.add(layers.BatchNormalization())
 model.add(layers.Dropout(0.5))
 
 model.add(layers.Dense(1, activation="sigmoid"))
+
 
 # Compiling the model
 
@@ -158,7 +164,7 @@ DNN = model.fit(
     epochs=500,
     verbose=True,
     validation_data=(X_test, Y_test),
-    callbacks=[metrics_logger],
+    # callbacks=[metrics_logger],
     batch_size=15,
 )
 
@@ -242,7 +248,7 @@ auc = roc_auc_score(Y_test, y_pred_prob)
 
 # Plot ROC Curve
 plt.figure(figsize=(8, 6))
-plt.plot(fpr, tpr, label=f"ROC Curve (AUC = {auc:.2f})", color="blue")
+plt.plot(fpr, tpr, label=f"DNN (AUC = {auc:.2f})", color="blue")
 plt.plot([0, 1], [0, 1], "k--", label="Random Classifier (AUC = 0.50)", color="red")
 plt.xlabel("False Positive Rate (FPR)")
 plt.ylabel("True Positive Rate (TPR)")
@@ -255,14 +261,15 @@ prediction = model.predict(X_test)
 
 
 length = len(prediction)
+print(prediction)
 for i in range(length):
-    if prediction[i] >= 0.35:
+    if prediction[i] >= 0.5:
         prediction[i] = 1
     else:
         prediction[i] = 0
 
 # Evaluation
-
+print(prediction)
 
 accuracy, precision, recall = confusion_matrix(Y_test, prediction)
 f1 = F1_score_function(precision, recall)
@@ -274,4 +281,4 @@ print("F1 Score : ", f1)
 
 print(classification_report(Y_test, prediction))
 
-# model.save("../../models/landslide_model.h5")
+model.save("../../models/landslide_model.h5")
