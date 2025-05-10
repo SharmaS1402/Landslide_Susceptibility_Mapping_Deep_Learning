@@ -108,6 +108,10 @@ National Remote Sensing Centre. "Bhuvan: An Indian Geo-Platform."
 
 Additional academic studies cited in the project presentation.
 
+### Contributors
+SharmaS1402
+rizul22
+
 ## License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
